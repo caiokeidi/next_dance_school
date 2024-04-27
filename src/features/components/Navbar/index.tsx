@@ -19,9 +19,9 @@ export const Navbar = () => {
                 className={
                     `
                     w-full h-max 
-                    flex flex-row justify-between
+                    flex flex-row justify-between items-center
                     relative
-                    p-4 z-[5]
+                    p-4 md:px-8 z-[5]
                     bg-white
                     drop-shadow-lg
                     rounded-b-lg
@@ -36,15 +36,34 @@ export const Navbar = () => {
             </nav>
             {/* Responsive Menu */}
             <div className={`
-              h-auto overflow-hidden
-              flex
-              sm:hidden 
-              absolute right-0 top-[80px]
+              overflow-hidden 
+              absolute right-0 top-0
               bg-white 
-              w-0 px-4 py-5
-              z-[4]
-              ${showNavbar && 'active'}
+              px-4 py-5 h-screen
+              rounded-l-lg
+              shadow-[rgba(0,0,15,0.2)_0px_5px_4px_5px]
+              z-[10]
+              flex-col
+              gap-2
+              ${showNavbar ? 'w-auto min-w-[50%] md:hidden flex' : 'hidden'}
             `}>
+                <div 
+                  className="
+                    w-full 
+                    flex justify-end items-center
+                    cursor-pointer 
+                    p-4
+                    text-gray-800 
+                    text-sm
+                    gap-8
+                  " 
+                  onClick={handleShowNavbar}
+                >
+                  <img 
+                    className='w-6 h-6 opacity-50'
+                    src='/media/img/icons/close--sm.svg' 
+                  />
+                </div>
                 <NavbarMenuItens/>
             </div>
         </div>

@@ -28,9 +28,9 @@ export const NavbarMenuItens = (props:INavbarMenuItens) => {
     return(
         <ul className="
             flex flex-col md:flex-row 
-            justify-between items-center
+            justify-start items-start
             list-none 
-            h-full
+            h-full w-full
             md:gap-10
         ">
             <li>
@@ -42,6 +42,18 @@ export const NavbarMenuItens = (props:INavbarMenuItens) => {
             <li> 
               <NavBarButton
                 label="A Escola"
+                onClick={() => {router.push('/courses')}} 
+              />
+            </li>
+            <li> 
+              <NavBarButton
+                label="Professores"
+                onClick={() => {router.push('/courses')}} 
+              />
+            </li>
+            <li> 
+              <NavBarButton
+                label="Contato"
                 onClick={() => {router.push('/courses')}} 
               />
             </li>
