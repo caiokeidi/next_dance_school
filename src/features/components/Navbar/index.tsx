@@ -64,7 +64,9 @@ export const Navbar = () => {
                     src='/media/img/icons/close--sm.svg' 
                   />
                 </div>
-                <NavbarMenuItens/>
+                <NavbarMenuItens
+                  handleShowNavbar={handleShowNavbar}
+                />
             </div>
         </div>
     )

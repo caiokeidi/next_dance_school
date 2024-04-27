@@ -1,7 +1,9 @@
 'use client';
 import { useRouter } from "next/navigation";
 
-interface INavbarMenuItens {}
+interface INavbarMenuItens {
+  handleShowNavbar?:any;
+}
 export const NavbarMenuItens = (props:INavbarMenuItens) => {
     const router = useRouter()
     const onLogoutFunction = () => {
@@ -36,25 +38,37 @@ export const NavbarMenuItens = (props:INavbarMenuItens) => {
             <li>
               <NavBarButton
                 label="Cursos"
-                onClick={() => {router.push('/courses')}} 
+                onClick={() => {
+                  router.push('/courses')
+                  props.handleShowNavbar && props.handleShowNavbar()
+                }} 
               />
             </li>
             <li> 
               <NavBarButton
                 label="A Escola"
-                onClick={() => {router.push('/courses')}} 
+                onClick={() => {
+                  router.push('/courses')
+                  props.handleShowNavbar && props.handleShowNavbar()
+                }} 
               />
             </li>
             <li> 
               <NavBarButton
                 label="Professores"
-                onClick={() => {router.push('/courses')}} 
+                onClick={() => {
+                  router.push('/courses')
+                  props.handleShowNavbar && props.handleShowNavbar()
+                }} 
               />
             </li>
             <li> 
               <NavBarButton
                 label="Contato"
-                onClick={() => {router.push('/courses')}} 
+                onClick={() => {
+                  router.push('/courses')
+                  props.handleShowNavbar && props.handleShowNavbar()
+                }} 
               />
             </li>
             <li>
